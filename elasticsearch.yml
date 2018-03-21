@@ -1,0 +1,32 @@
+# ======================== Elasticsearch Configuration =========================
+
+# ---------------------------------- Cluster -----------------------------------
+
+cluster.name: bitelio
+
+# ------------------------------------ Node ------------------------------------
+
+node.name: onyx
+
+# ----------------------------------- Index ------------------------------------
+
+index:
+  number_of_replicas: 0
+  number_of_shards: 1
+  refresh_interval: 60s
+  check_on_startup: checksum
+
+# ----------------------------------- Paths ------------------------------------
+
+path:
+  data: /var/lib/elasticsearch
+  logs: /var/log/elasticsearch
+
+# ----------------------------------- Memory -----------------------------------
+
+bootstrap.memory_lock: false
+
+# ---------------------------------- Network -----------------------------------
+
+network.host: 0.0.0.0
+transport.host: localhost
